@@ -6,7 +6,7 @@
 .wrapper {
   width: 75rem;
   height: 45rem;
-  background-color: green;
+  background-color: black;
   position: relative;
   margin: 0 auto;
 }
@@ -24,8 +24,6 @@
 }
 
 img {
-  width: 68rem;
-  height: 37.5rem;
   object-fit: cover;
 }
 
@@ -60,9 +58,8 @@ img {
   transform: scale(1.1);
 }
 
-input[name="r"] {
-  position: absolute;
-  visibility: hidden;
+input {
+  display: none;
 }
 
 .slides {
@@ -96,30 +93,18 @@ input[name="r"] {
 
 .text {
   position: absolute;
-  bottom: 160px;
+  bottom: 200px;
   color: white;
   display: inline-flex;
   left: 35px;
+  font-size: 28px;
   top: 540px;
-}
-
-.text p {
   opacity: 0;
-  -webkit-transform: translateX(500px);
-  transform: translateX(500px);
 }
 
-.slide-radio1:checked ~ .slide1 p,
-.slide-radio2:checked ~ .slide2 p,
-.slide-radio3:checked ~ .slide3 p,
-.slide-radio4:checked ~ .slide4 p {
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+.slide-radio1:checked ~ .slide1,
+.slide-radio2:checked ~ .slide2,
+.slide-radio3:checked ~ .slide3,
+.slide-radio4:checked ~ .slide4 {
   opacity: 1;
-}
-
-.slide-radio1:checked ~ .slide1 h4 {
-  opacity: 1;
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
 }
