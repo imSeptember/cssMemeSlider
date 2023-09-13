@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 40rem;
+  height: 40rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+.slide__wrapper {
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+}
+
+img {
+  object-fit: cover;
+}
+
+.middle {
+  overflow: hidden;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 95%;
+  transform: translateX(-95%);
+  display: flex;
+}
+
+.bar {
+  height: 8px;
+  width: 30px;
+  margin: 6px;
+  cursor: pointer;
+  background-color: #ddd;
+  border-radius: 10px;
+  opacity: 0.7;
+  transition: all 0.4s ease;
+}
+
+.bar:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+input {
+  display: none;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  transition: all 0.6s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: 25%;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+  margin-left: -75%;
+}
+
+.text {
+  position: absolute;
+  color: black;
+  /* left: 200px; */
+  font-size: 28px;
+  bottom: 8px;
+  opacity: 0;
+}
+
+.slide-radio1:checked ~ .slide1,
+.slide-radio2:checked ~ .slide2,
+.slide-radio3:checked ~ .slide3,
+.slide-radio4:checked ~ .slide4 {
+  opacity: 1;
+}
+
+.bar:active,
+.bar:active,
+.bar:active,
+.bar:active {
+  color: red;
+  background-color: red;
+}
