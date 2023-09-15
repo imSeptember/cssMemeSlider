@@ -25,10 +25,10 @@ img {
 }
 
 .navigation {
-  position: absolute;
-  bottom: 10px;
+  /* position: absolute; */
+  /* bottom: 10px;
   left: 95%;
-  transform: translateX(-95%);
+  transform: translateX(-95%); */
   display: flex;
 }
 
@@ -81,19 +81,20 @@ input {
 }
 
 .text {
-  position: absolute;
   color: black;
-  /* left: 200px; */
   font-size: 28px;
-  bottom: 8px;
-  opacity: 0;
+  display: none;
+}
+
+.bot__container {
+  display: flex;
 }
 
 .slide-radio1:checked ~ .slide1,
 .slide-radio2:checked ~ .slide2,
 .slide-radio3:checked ~ .slide3,
 .slide-radio4:checked ~ .slide4 {
-  opacity: 1;
+  display: block;
 }
 
 .bar:active,
